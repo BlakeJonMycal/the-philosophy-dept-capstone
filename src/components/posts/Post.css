@@ -30,16 +30,28 @@
     border: 1px solid var(--outline);
     border-radius: 0.5rem;
     padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
   }
   
   .philosopher-info {
-    color: var(--info);
-    font-family: "Roboto", sans-serif;
-  }
-  
-  .philosopher-header {
     font-size: larger;
     font-weight: 700;
     line-height: 3rem;
     color: var(--primary);
+    font-family: "Roboto", sans-serif;
+  }
+  
+  .philosopher-header {
+    display: flex;
+    flex-direction: row;
+  }
+  .philosopherdetails-image {
+    width: 50%;
+  }
+  .details-left {
+    flex-basis: 40%;
+  }
+  .details-right {
+    flex-basis: 60%;
   }

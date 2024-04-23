@@ -15,6 +15,25 @@ export const PostDetails = () => {
 
 
     return <section className="philosopher">
-<header className="philosopher-header">{philosopher.philosopherName}</header>
+        <section className="details-left">
+            <header className="philosopher-header">
+                <img src={philosopher.image} className="philosopherdetails-image" />
+                <ul className="philosopher-info">
+                    <li>Name: {philosopher.philosopherName}</li>
+                    <li>School of Thought: {philosopher.school?.name}</li>
+                    <li>Ranking: {philosopher.ranking?.name}</li>
+                </ul>
+            </header>
+            <div className="philosopher-reading-list">
+                <h3>Reading List: </h3>
+                {philosopher.books}</div>
         </section>
+        <section className="details-right">
+            <div className="philosopher-notes">
+                <h3>Annotations</h3>
+                {philosopher.notes}
+            </div>
+        </section>
+
+    </section>
 }
