@@ -1,9 +1,9 @@
-.philosopher-container {
+.philosopherlibrary-container {
     display: flex;
     flex-wrap: wrap;
   }
   
-  .philosopher-card {
+  .philosopherlibrary-card {
     flex-basis: 20%;
     border: 1px solid black;
     background-color: white;
@@ -13,11 +13,33 @@
     cursor: pointer;
   }
   
-  .philosopher-image {
+  .philosopherlibrary-image {
     width: 100%;
     border-radius: inherit;
   }
   
-  .philosopher-info {
+  .philosopherlibrary-info {
     color: gray;
+  }
+  section.philosopher {
+    margin: 3rem;
+  }
+  
+  .philosopher {
+    background-color: var(--white);
+    border: 1px solid var(--outline);
+    border-radius: 0.5rem;
+    padding: 1rem;
+  }
+  
+  .philosopher-info {
+    color: var(--info);
+    font-family: "Roboto", sans-serif;
+  }
+  
+  .philosopher-header {
+    font-size: larger;
+    font-weight: 700;
+    line-height: 3rem;
+    color: var(--primary);
   }
