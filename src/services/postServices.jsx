@@ -5,3 +5,10 @@ export const getAllPosts = () => {
 export const getPhilosopherById = (id) => {
     return fetch(`http://localhost:8088/philosophers?id=${id}&_expand=school&_expand=user&_expand=ranking`).then((res) => res.json())
 }
+
+export const getAllSchools = () => {
+    return fetch(`http://localhost:8088/schools`).then((res) => res.json())
+}
+export const getAllRankings = () => {
+    return fetch(`http://localhost:8088/rankings`).then((res) => res.json())
+}
