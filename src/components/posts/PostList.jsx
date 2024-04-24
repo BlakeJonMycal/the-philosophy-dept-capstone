@@ -7,11 +7,13 @@ import { Link } from "react-router-dom"
 export const PostList = () => {
   const [allPosts, setAllPosts] = useState([])
 
-  useEffect(() => {
+  const getAndSetAllPosts = () => {
     getAllPosts().then((postsArray) => {
       setAllPosts(postsArray)
     })
-
+  }
+  useEffect(() => {
+    getAndSetAllPosts()
   }, [])
 
 

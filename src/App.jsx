@@ -4,6 +4,7 @@ import { PostList } from './components/posts/PostList'
 import { NavBar } from './components/nav/NavBar'
 import { PostDetails } from './components/posts/PostDetails'
 import { NewPostForm } from './components/forms/NewPostForm'
+import { EditPostDetails } from './components/forms/EditPostDetails'
 
 
 
@@ -19,6 +20,7 @@ export const App = () => {
         <Route path="myLibrary">
           <Route index element={<PostList />} />
             <Route path=":myLibraryId" element={<PostDetails />} />
+              <Route path=":myLibraryId/edit" element={<EditPostDetails />} />
         </Route>
         <Route path="addPhilosopher" element={<NewPostForm />} />
       </Route>
