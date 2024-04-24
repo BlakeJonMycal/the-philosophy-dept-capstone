@@ -1,11 +1,14 @@
 import { useEffect, useState } from "react"
-import { useParams } from "react-router-dom"
-import { getPhilosopherById } from "../../services/postServices"
+import { useNavigate, useParams } from "react-router-dom"
+import { deletePhilosopher, getPhilosopherById } from "../../services/postServices"
+import "./Post.css"
 
 export const PostDetails = () => {
     const [philosopher, setPhilosopher] = useState({})
-    
+
     const { myLibraryId } = useParams()
+
+    const navigate = useNavigate()
 
     useEffect(() => {
         getPhilosopherById(myLibraryId).then((data) => {
@@ -14,9 +17,13 @@ export const PostDetails = () => {
         })
     }, [])
 
+    const handleEditClick = () => {
+        navigate(`/myLibrary/${myLibraryId}/edit`)
+    }
+
     const deletePhilosopherFromDatabase = () => {
-        deletePhilosopher().then(() => {
-            
+        deletePhilosopher(philosopher.id).then(() => {
+            navigate(`/myLibrary`)
         })
     }
 
@@ -40,6 +47,8 @@ export const PostDetails = () => {
                 <h3>Annotations</h3>
                 {philosopher.notes}
             </div>
+            <button className="button btn-secondary" onClick={handleEditClick}>Edit Philosopher</button>
+            <button className="button btn-warning" onClick={deletePhilosopherFromDatabase}>Delete Philosopher</button>
         </section>
 
     </section>
