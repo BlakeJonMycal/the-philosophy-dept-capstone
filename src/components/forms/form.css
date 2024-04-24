@@ -1,4 +1,7 @@
 .save-button {
     float: inline-end;
     margin-top: 1em;
+    bottom: -15px; /* Adjust this value as needed */
+    left: 50%;
+    transform: translateX(-50%);
   }
