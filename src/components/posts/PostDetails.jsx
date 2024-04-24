@@ -4,6 +4,7 @@ import { getPhilosopherById } from "../../services/postServices"
 
 export const PostDetails = () => {
     const [philosopher, setPhilosopher] = useState({})
+    
     const { myLibraryId } = useParams()
 
     useEffect(() => {
@@ -11,7 +12,13 @@ export const PostDetails = () => {
             const philosopherObj = data[0]
             setPhilosopher(philosopherObj)
         })
-    }, [myLibraryId])
+    }, [])
+
+    const deletePhilosopherFromDatabase = () => {
+        deletePhilosopher().then(() => {
+            
+        })
+    }
 
 
     return <section className="philosopher">

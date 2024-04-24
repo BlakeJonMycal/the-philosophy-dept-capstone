@@ -15,7 +15,7 @@
   
   .philosopherlibrary-image {
     width: 100%;
-    border-radius: inherit;
+    border-radius: 25px;
   }
   
   .philosopherlibrary-info {
@@ -48,6 +48,7 @@
   }
   .philosopherdetails-image {
     width: 50%;
+
   }
   .details-left {
     flex-basis: 40%;
