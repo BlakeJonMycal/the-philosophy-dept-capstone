@@ -34,6 +34,7 @@ export const Login = () => {
           <form className="form-login" onSubmit={handleLogin}>
             <h1>The Philosophy Dept.</h1>
             <h2>an annotated digital library</h2>
+            <img src="/images/home-ghost.gif" alt="ghost gif" loop={true} />
             <fieldset>
               <div className="form-group">
                 <input

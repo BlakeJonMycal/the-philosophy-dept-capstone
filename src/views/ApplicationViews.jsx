@@ -34,6 +34,7 @@ export const ApplicationViews = () => {
                     <Route path=":myLibraryId/edit" element={<EditPostDetails />} />
                 </Route>
                 <Route path="addPhilosopher" element={<NewPostForm currentUser={currentUser} />} />
+                <Route path="myProfile" element={"profile view"} />
             </Route>
         </Routes>
     )
