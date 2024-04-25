@@ -3,20 +3,35 @@ import { getAllPosts } from "../../services/postServices"
 import "./Post.css"
 import { Post } from "./Post"
 import { Link } from "react-router-dom"
-//PostList component will serve to display all of a user's posts
+
+
 export const PostList = ({ currentUser }) => {
-  const [allPosts, setAllPosts] = useState([])
+  const [userPosts, setUserPosts] = useState([])
 
-  const getAndSetAllPosts = () => {
-    getAllPosts().then((postsArray) => {
-      setAllPosts(postsArray)
-    })
-  }
   useEffect(() => {
-    getAndSetAllPosts()
-  }, [])
+    const getAndSetUserPosts = async () => {
+      const allPosts = await getAllPosts()
+      const filteredPosts = allPosts.filter(post => post.userId === currentUser.id)
+      setUserPosts(filteredPosts)
+    }
+    getAndSetUserPosts(currentUser)
 
+  }, [currentUser])
 
+  // useEffect(() => {
+  //   const getAndSetUserPosts = async () => {
+  //     try {
+  //       const allPosts = await getAllPosts()
+  //       const filteredPosts = allPosts.filter(post => post.userId === currentUser.id)
+  //       setUserPosts(filteredPosts)
+  //     } catch (error) {
+  //       console.error("Error fetching posts:", error)
+  //     }
+  //   }
+  //   if (currentUser) {
+  //     getAndSetUserPosts()
+  //   }
+  // }, [currentUser])
 
 
 
@@ -25,10 +40,10 @@ export const PostList = ({ currentUser }) => {
   return (<>
     <h2>My Library</h2>
     <section className="philosopherlibrary-container">
-      {allPosts.map((postObj) => {
+      {userPosts.map((postObj) => {
         return (
-          <Link to={`/myLibrary/${postObj.id}`} className="philosopherlibrary-card">
-            <Post post={postObj} currentUser={currentUser} key={postObj.id} />
+          <Link to={`/myLibrary/${postObj.id}`} className="philosopherlibrary-card" key={postObj.id}>
+            <Post post={postObj} currentUser={currentUser} />
           </Link>
         )
       })}

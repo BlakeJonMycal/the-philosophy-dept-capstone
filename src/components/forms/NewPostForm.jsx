@@ -3,7 +3,7 @@ import { getAllRankings, getAllSchools, postNewPhilosopher } from "../../service
 import { useNavigate } from "react-router-dom"
 import "./form.css"
 
-export const NewPostForm = () => {
+export const NewPostForm = ({ currentUser }) => {
     const [newPost, setNewPost] = useState({})
     const [schoolType, setSchoolType] = useState([])
     const [rankingType, setRankingType] = useState([])
@@ -23,8 +23,17 @@ export const NewPostForm = () => {
     }, [])
 
     const handleSave = (event) => {
+        const newPhilosopher = {
+            userId: currentUser.id,
+            schoolId: newPost.schoolId,
+            rankingId: newPost.rankingId,
+            philosopherName: newPost.philosopherName,
+            image: newPost.image,
+            books: newPost.books,
+            notes: newPost.notes,
+        }
         event.preventDefault()
-        postNewPhilosopher(newPost).then((philosopherObj) => {
+        postNewPhilosopher(newPhilosopher).then((philosopherObj) => {
             navigate(`/myLibrary/${philosopherObj.id}`)
         })
     }
