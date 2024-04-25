@@ -1,4 +1,4 @@
-export const getAllPosts = () => {
+export const getAllPosts = async () => {
     return fetch(`http://localhost:8088/philosophers`).then((res) => res.json())
 
 }
@@ -13,13 +13,13 @@ export const getAllRankings = () => {
     return fetch(`http://localhost:8088/rankings`).then((res) => res.json())
 }
 
-export const postNewPhilosopher = (newPost) => {
+export const postNewPhilosopher = (newPhilosopher) => {
     const postOptions = {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
         },
-        body: JSON.stringify(newPost),
+        body: JSON.stringify(newPhilosopher),
     }
     return fetch("http://localhost:8088/philosophers", postOptions).then((res) => res.json())
 }

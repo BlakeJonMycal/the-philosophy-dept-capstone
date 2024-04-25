@@ -29,11 +29,11 @@ export const ApplicationViews = () => {
                 </>
             }>
                 <Route path="myLibrary">
-                    <Route index element={<PostList currentUser={currentUser}/>} />
+                    <Route index element={<PostList currentUser={currentUser} />} />
                     <Route path=":myLibraryId" element={<PostDetails />} />
                     <Route path=":myLibraryId/edit" element={<EditPostDetails />} />
                 </Route>
-                <Route path="addPhilosopher" element={<NewPostForm />} />
+                <Route path="addPhilosopher" element={<NewPostForm currentUser={currentUser} />} />
             </Route>
         </Routes>
     )
