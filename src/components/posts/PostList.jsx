@@ -4,7 +4,7 @@ import "./Post.css"
 import { Post } from "./Post"
 import { Link } from "react-router-dom"
 //PostList component will serve to display all of a user's posts
-export const PostList = () => {
+export const PostList = ({ currentUser }) => {
   const [allPosts, setAllPosts] = useState([])
 
   const getAndSetAllPosts = () => {
@@ -28,7 +28,7 @@ export const PostList = () => {
       {allPosts.map((postObj) => {
         return (
           <Link to={`/myLibrary/${postObj.id}`} className="philosopherlibrary-card">
-            <Post post={postObj} key={postObj.id} />
+            <Post post={postObj} currentUser={currentUser} key={postObj.id} />
           </Link>
         )
       })}
