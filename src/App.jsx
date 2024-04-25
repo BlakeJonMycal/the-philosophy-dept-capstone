@@ -1,29 +1,23 @@
-import { Outlet, Route, Routes } from 'react-router-dom'
+import { Route, Routes } from 'react-router-dom'
+import { Login } from './components/auth/Login'
+import { Register } from './components/auth/Register'
+import { ApplicationViews } from './views/ApplicationViews'
+import { Authorized } from './views/Authorized'
 import './App.css'
-import { PostList } from './components/posts/PostList'
-import { NavBar } from './components/nav/NavBar'
-import { PostDetails } from './components/posts/PostDetails'
-import { NewPostForm } from './components/forms/NewPostForm'
-import { EditPostDetails } from './components/forms/EditPostDetails'
 
 
 
 export const App = () => {
   return (
     <Routes>
-      <Route path="/" element={
-        <>
-          <NavBar />
-          <Outlet />
-        </>
-      }>
-        <Route path="myLibrary">
-          <Route index element={<PostList />} />
-            <Route path=":myLibraryId" element={<PostDetails />} />
-              <Route path=":myLibraryId/edit" element={<EditPostDetails />} />
-        </Route>
-        <Route path="addPhilosopher" element={<NewPostForm />} />
-      </Route>
+      <Route path="/login" element={<Login />} />
+      <Route path="/register" element={<Register />} />
+    
+      <Route path="*" element={
+        <Authorized>
+          <ApplicationViews />
+        </Authorized>
+      } />
     </Routes>
   )
 }
