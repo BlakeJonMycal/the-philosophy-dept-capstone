@@ -5,3 +5,13 @@
     left: 50%;
     transform: translateX(-50%);
   }
+  .form {
+    display: flex;
+    flex-direction: row;
+  }
+  .right-side {
+    flex-basis: 30%;
+  }
+  .left-side {
+    flex-basis: 60%;
+  }

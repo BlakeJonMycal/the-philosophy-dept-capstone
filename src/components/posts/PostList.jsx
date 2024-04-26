@@ -8,33 +8,15 @@ import { Link } from "react-router-dom"
 export const PostList = ({ currentUser }) => {
   const [userPosts, setUserPosts] = useState([])
 
-  useEffect(() => {
-    const getAndSetUserPosts = async () => {
-      const allPosts = await getAllPosts()
+useEffect(() => {
+  const getAndSetUserPosts = () => {
+    getAllPosts().then(allPosts => {
       const filteredPosts = allPosts.filter(post => post.userId === currentUser.id)
       setUserPosts(filteredPosts)
-    }
-    getAndSetUserPosts(currentUser)
-
-  }, [currentUser])
-
-  // useEffect(() => {
-  //   const getAndSetUserPosts = async () => {
-  //     try {
-  //       const allPosts = await getAllPosts()
-  //       const filteredPosts = allPosts.filter(post => post.userId === currentUser.id)
-  //       setUserPosts(filteredPosts)
-  //     } catch (error) {
-  //       console.error("Error fetching posts:", error)
-  //     }
-  //   }
-  //   if (currentUser) {
-  //     getAndSetUserPosts()
-  //   }
-  // }, [currentUser])
-
-
-
+    })
+  }
+  getAndSetUserPosts(currentUser)
+}, [currentUser])
 
 
   return (<>
