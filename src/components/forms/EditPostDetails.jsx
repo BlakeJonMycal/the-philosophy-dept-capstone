@@ -73,7 +73,7 @@ export const EditPostDetails = () => {
                             setPhilosopher(copy)
                         }}
                         type="text"
-                        value={philosopher.philosopherName ? philosopher.philosopherName : '' }
+                        value={philosopher.philosopherName ? philosopher.philosopherName : ''}
                     />
                 </fieldset>
                 <fieldset id="school-field">
@@ -81,13 +81,14 @@ export const EditPostDetails = () => {
                         School of Thought: {""}
                     </label>
                     <select
+                        value={philosopher.schoolId}
                         onChange={(event) => {
                             const copy = { ...philosopher }
                             copy.schoolId = parseInt(event.target.value)
                             setPhilosopher(copy)
                         }}
                     >
-                        <option value="">Select</option>
+                        <option value=''>Select</option>
                         {schoolType.map((schoolObj) => {
                             return (
                                 <option key={schoolObj.id} value={schoolObj.id}>
@@ -101,6 +102,7 @@ export const EditPostDetails = () => {
                     <label>
                         Ranking:{" "}
                         <select
+                            value={philosopher.rankingId}
                             onChange={(event) => {
                                 const copy = { ...philosopher }
                                 copy.rankingId = parseInt(event.target.value)
@@ -138,7 +140,7 @@ export const EditPostDetails = () => {
                         <textarea
                             rows={3}
                             cols={40}
-                            value={philosopher.books ? philosopher.books : '' }
+                            value={philosopher.books ? philosopher.books : ''}
                             onChange={(event) => {
                                 const copy = { ...philosopher }
                                 copy.books = event.target.value
@@ -156,7 +158,7 @@ export const EditPostDetails = () => {
                         <textarea
                             rows={20}
                             cols={100}
-                            value={philosopher.notes ? philosopher.notes : '' }
+                            value={philosopher.notes ? philosopher.notes : ''}
                             onChange={(event) => {
                                 const copy = { ...philosopher }
                                 copy.notes = event.target.value
