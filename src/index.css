@@ -10,10 +10,10 @@ font-family: "Roboto", sans-serif;
 /* COLOR PALETTE */
 /* Feel free to change these values and create your own color palette! https://coolors.co/ is a great resource */
 :root {
-  --primary: #ffb400;
-  --secondary: #00a6ed;
+  --primary: #3b3b3b;
+  --secondary: #5c6b73;
   --info: #7fb800;
-  --warning: #f6511d;
+  --warning: #f67280;
   --white: #ffffff;
   --offWhite: #f2f2f3;
   --dark: #3b3b3b;
@@ -82,7 +82,7 @@ button {
 }
 
 .btn-secondary:hover {
-  background-color: #0097d7;
+  background-color: #232f34;
 }
 
 .btn-warning {

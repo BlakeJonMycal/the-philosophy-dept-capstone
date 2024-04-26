@@ -5,10 +5,8 @@ import { PostDetails } from "../components/posts/PostDetails"
 import { EditPostDetails } from "../components/forms/EditPostDetails"
 import { NewPostForm } from "../components/forms/NewPostForm"
 import { useEffect, useState } from "react"
-
-
-
-
+import { Profile } from "../components/user/Profile"
+import { EditProfile } from "../components/forms/EditProfile"
 
 export const ApplicationViews = () => {
     const [currentUser, setCurrentUser] = useState({})
@@ -34,7 +32,8 @@ export const ApplicationViews = () => {
                     <Route path=":myLibraryId/edit" element={<EditPostDetails />} />
                 </Route>
                 <Route path="addPhilosopher" element={<NewPostForm currentUser={currentUser} />} />
-                <Route path="myProfile" element={"profile view"} />
+                <Route path="myProfile" element={<Profile currentUser={currentUser} />} />
+                <Route path="myProfile/edit" element={<EditProfile currentUser={currentUser} />} />
             </Route>
         </Routes>
     )
