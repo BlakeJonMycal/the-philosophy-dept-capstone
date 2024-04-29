@@ -23,7 +23,9 @@ export const ApplicationViews = () => {
             <Route path="/" element={
                 <>
                     <NavBar />
+
                     <Outlet />
+
                 </>
             }>
                 <Route path="myLibrary">
@@ -35,6 +37,7 @@ export const ApplicationViews = () => {
                 <Route path="myProfile" element={<Profile currentUser={currentUser} />} />
                 <Route path="myProfile/edit" element={<EditProfile currentUser={currentUser} />} />
             </Route>
+
         </Routes>
     )
 }
