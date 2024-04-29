@@ -20,7 +20,7 @@ useEffect(() => {
 
 
   return (<>
-    <h2>My Library</h2>
+    <h2 className="title">My Library</h2>
     <section className="philosopherlibrary-container">
       {userPosts.map((postObj) => {
         return (

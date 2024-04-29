@@ -18,7 +18,7 @@ font-family: "Roboto", sans-serif;
   --offWhite: #f2f2f3;
   --dark: #3b3b3b;
   --outline: #c3c0c0;
-  --appBackground: #e5e8ec;
+  --appBackground: #f2f4f7;
 }
 
 /* GLOBAL STYLES */
@@ -31,6 +31,9 @@ textarea {
 }
 
 body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   background-color: var(--appBackground);
   margin: 0;
 }
@@ -100,6 +103,8 @@ button {
 .btn-info:hover {
   background-color: #71a500;
 }
+
+
 
 
 

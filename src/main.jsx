@@ -3,11 +3,17 @@ import ReactDOM from "react-dom/client"
 import { App } from "./App.jsx"
 import { BrowserRouter } from "react-router-dom"
 import "./index.css"
+import { Footer } from "./components/nav/Footer.jsx"
+import "./components/nav/NavBar.css"
 //backup branch for mvp
 const container = document.getElementById("root")
 const root = ReactDOM.createRoot(container)
 root.render(
     <BrowserRouter>
+    <div className="main-content">
         <App />
+        </div>
+        <Footer />
+
     </BrowserRouter>
 )
