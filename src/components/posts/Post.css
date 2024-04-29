@@ -5,9 +5,9 @@
   }
   
   .philosopherlibrary-card {
-    flex-basis: 20%;
+    flex-basis: 25%;
     text-align: center;
-    margin: 1.5em;
+    margin-bottom: 2em;
     border-radius: 1em;
     cursor: pointer;
   }
