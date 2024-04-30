@@ -19,17 +19,18 @@ useEffect(() => {
 }, [currentUser])
 
 
-  return (<>
-    <h2 className="title">My Library</h2>
+  return (
+  <section className="library-page">
+    <h2 className="title">library</h2>
     <section className="philosopherlibrary-container">
-      {userPosts.map((postObj) => {
-        return (
+      {userPosts.map((postObj) => (
+        
           <Link to={`/myLibrary/${postObj.id}`} className="philosopherlibrary-card" key={postObj.id}>
             <Post post={postObj} currentUser={currentUser} />
           </Link>
-        )
-      })}
+        
+      ))}
     </section>
-  </>
+  </section>
   )
 }

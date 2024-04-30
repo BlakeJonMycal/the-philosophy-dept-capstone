@@ -33,8 +33,9 @@ export const Login = () => {
         <section>
           <form className="form-login" onSubmit={handleLogin}>
             <h1>The Philosophy Dept.</h1>
+            <img className="login-logo" src="/images/capstone logo.png" alt="logo" />
             <h2>an annotated digital library</h2>
-            <img src="/images/ghostgirl.png" alt="ghost girl" />
+
             <fieldset>
               <div className="form-group">
                 <input
@@ -51,14 +52,14 @@ export const Login = () => {
             <fieldset>
               <div className="form-group">
                 <button className="login-btn btn-info" type="submit">
-                  Sign in
+                  enter
                 </button>
               </div>
             </fieldset>
           </form>
         </section>
-        <section>
-          <Link to="/register">Not a member yet? Enroll here</Link>
+        <section className="enroll-link">
+          <Link to="/register">not a member yet? enroll here</Link>
         </section>
       </main>
     )
