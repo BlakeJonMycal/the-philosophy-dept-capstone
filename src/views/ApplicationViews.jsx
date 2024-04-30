@@ -25,7 +25,6 @@ export const ApplicationViews = () => {
                 <>
                     <NavBar />
                     <Footer />
-
                     <Outlet />
 
                 </>

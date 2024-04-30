@@ -1,70 +1,132 @@
+.library-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f2f4f7;
+  padding-top: 1em;
+  padding-bottom: 2em;
+
+}
+
 .philosopherlibrary-container {
-    display: flex;
-    flex-wrap: wrap;
-    background-color: var(--appBackground);
-  }
-  
-  .philosopherlibrary-card {
-    flex-basis: 25%;
-    text-align: center;
-    margin-bottom: 2em;
-    border-radius: 1em;
-    cursor: pointer;
-  }
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-around;
+}
 
-  .philosopher-library-info-card {
-    height: 50%;
-  }
-  
-  .philosopherlibrary-image {
-    width: 300px;
-    height: 500px;
-    object-fit: cover;
-    border-radius: 25px;
-    border: 1.5px solid #1D1D1D;
-  }
-  
-  .philosopherlibrary-info {
-    color: #1D1D1D;
-  }
-  section.philosopher {
-    margin: 3rem;
-  }
-  
-  .philosopher {
-    background-color: var(--white);
-    border: 1px solid var(--outline);
-    border-radius: 0.5rem;
-    padding: 1rem;
-    display: flex;
-    flex-wrap: wrap;
-  }
-  
-  .philosopher-info {
-    font-size: larger;
-    font-weight: 700;
-    line-height: 3rem;
-    color: var(--primary);
-    font-family: "Roboto", sans-serif;
-  }
-  
-  .philosopher-header {
-    display: flex;
-    flex-direction: row;
-    background-color:#1D1D1D;
-  }
-  .philosopherdetails-image {
-    width: 50%;
-    height: 50px;
+.philosopherlibrary-card {
+  flex-basis: 25%;
+  text-align: center;
+  margin-bottom: 1.5em;
+  border-radius: 1em;
+  cursor: pointer;
+}
 
-  }
-  .details-left {
-    flex-basis: 40%;
-  }
-  .details-right {
-    flex-basis: 60%;
-  }
-  .title {
-    color: #1D1D1D;
-    margin-left: 35px;
-  }
+.philosopher-library-info-card {
+  height: 50%;
+}
+
+.philosopherlibrary-image {
+  width: 300px;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 25px;
+  border: 1.5px solid #1D1D1D;
+}
+
+.philosopherlibrary-info {
+  color: #1D1D1D;
+}
+
+
+.philosopher {
+  background-color: #d6b575;
+  border: 2px solid #888279;
+  border-radius: 0.5rem;
+  padding: 2em;
+  margin: 4em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+
+}
+
+.philosopher-info {
+  font-size: large;
+  font-weight: 500;
+  line-height: 3rem;
+  color: #f2f4f7;
+  font-family: "Roboto", sans-serif;
+}
+
+.philosopher-header-top {
+  display: flex;
+  flex-direction: row;
+  background-color: #1D1D1D;
+
+}
+
+.philosopherdetails-image {
+  width: 140px;
+  height: 135px;
+  border-radius: 25px;
+  margin: 1em;
+  border: 2px solid #888279
+}
+
+.details-left {
+  flex-basis: 35%;
+  border: 2px solid #888279;
+  background-color: #1D1D1D;
+
+}
+
+.details-right {
+  flex-basis: 55%;
+  margin-left: 2em;
+}
+
+.title {
+  background-color: #f2f4f7;
+  margin-left: 35px;
+}
+
+
+
+
+.details-left-container {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.philosopher-reading-list {
+  color: #f2f4f7;
+  margin-left: 1em;
+  margin-right: 1em;
+  font-style: italic;
+}
+
+.h3 {
+  border-bottom: 10px solid #888279;
+}
+
+.h3-reading {
+  border-bottom: 2px solid #888279;
+  color: #f2f4f7;
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+.detail-buttons {
+  margin-top: 1em;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.philosopher-notes {
+  border-bottom: 2px solid #888279;
+  margin-bottom: 1em;
+}

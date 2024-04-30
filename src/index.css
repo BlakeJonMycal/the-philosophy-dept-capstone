@@ -10,7 +10,7 @@ font-family: "Roboto", sans-serif;
 /* COLOR PALETTE */
 /* Feel free to change these values and create your own color palette! https://coolors.co/ is a great resource */
 :root {
-  --primary: #3b3b3b;
+  --primary: #1D1D1D;
   --secondary: #5c6b73;
   --info: #7fb800;
   --warning: #f67280;
@@ -18,7 +18,6 @@ font-family: "Roboto", sans-serif;
   --offWhite: #f2f2f3;
   --dark: #3b3b3b;
   --outline: #c3c0c0;
-  --appBackground: #f2f4f7;
 }
 
 /* GLOBAL STYLES */
@@ -31,11 +30,8 @@ textarea {
 }
 
 body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  background-color: var(--appBackground);
   margin: 0;
+  padding: 0;
 }
 
 h1,
@@ -46,6 +42,11 @@ h5,
 h6 {
   font-family: "Roboto", serif;
 }
+
+.main-content {
+  background-color: #1D1D1D ;
+}
+
 
 /* This prevents all the links in the app from having default underline */
 a {
@@ -82,6 +83,7 @@ button {
 
 .btn-secondary {
   background-color: var(--secondary);
+  margin-right: 3em;
 }
 
 .btn-secondary:hover {
@@ -97,11 +99,11 @@ button {
 }
 
 .btn-info {
-  background-color: var(--info);
+  background-color: #888279;
 }
 
 .btn-info:hover {
-  background-color: #71a500;
+  background-color: #888279;
 }
 
 

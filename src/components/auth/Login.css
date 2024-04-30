@@ -1,15 +1,19 @@
 .container-login {
     text-align: center;
+    background-color: #1D1D1D;
+    margin: -1em;
   }
   
   .container-login > section > a {
     text-decoration: underline;
-    color: var(--secondary);
+    background-color: #1D1D1D;
   }
   
   .form-login {
     width: 60%;
-    margin: 2rem auto;
+    margin: auto;
+    color: #1D1D1D;
+
   }
   
   .form-login > h1 {
@@ -20,6 +24,8 @@
   .form-login > h2 {
     text-align: center;
     font-size: 1.5rem;
+    color: #888279;
+    margin-bottom: 2em;
   }
   
   .form-login > fieldset > input[type="email"] {
@@ -27,7 +33,7 @@
   }
   
   .login-btn {
-    align-self: flex-end;
+    align-self: center;
   }
   
   .login-btn:focus {
@@ -35,16 +41,22 @@
     outline: 2px solid transparent;
     outline-offset: 2px;
   }
+
+ #root {
+ background-color: #1D1D1D ;
+ }
+
+ 
   
   /************* FORM STYLES *************/
   
   form {
     margin: 3rem 5rem;
-    border: 1px solid var(--outline);
     border-radius: 10px;
     padding: 1rem 0rem 0rem 1rem;
-    box-shadow: 1px 2px 5px lightgray;
-    background-color: var(--offWhite);
+    box-shadow: 10px 10px 10px 2px #888279;
+    background-color:#1D1D1D;
+    
   }
   
   fieldset {
@@ -56,10 +68,12 @@
   
   .form-control {
     height: calc(1.5em + 0.75rem + 2px);
+    width: 30em;
     padding: 0.375rem 0.75rem;
     font-size: 1rem;
-    border: 1px solid var(--outline);
     border-radius: 0.25rem;
+    background-color: #f2f4f7;
+    align-self: center;
   }
   
   .form-group {
@@ -77,4 +91,16 @@
     outline: 2px solid transparent;
     outline-offset: 2px;
   }
+
+  .enroll-link {
+    margin-top: 3em;
+    padding-bottom: 2em;
+    color: #888279
+  }
+
+  .login-logo {
+    margin-top: -3em;
+    margin-bottom: -.5em;
+  }
+  
   
