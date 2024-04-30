@@ -7,6 +7,7 @@ import { NewPostForm } from "../components/forms/NewPostForm"
 import { useEffect, useState } from "react"
 import { Profile } from "../components/user/Profile"
 import { EditProfile } from "../components/forms/EditProfile"
+import { Footer } from "../components/nav/Footer"
 
 export const ApplicationViews = () => {
     const [currentUser, setCurrentUser] = useState({})
@@ -23,6 +24,7 @@ export const ApplicationViews = () => {
             <Route path="/" element={
                 <>
                     <NavBar />
+                    <Footer />
 
                     <Outlet />
 
