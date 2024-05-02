@@ -13,6 +13,14 @@ export const getAllRankings = () => {
     return fetch(`http://localhost:8088/rankings`).then((res) => res.json())
 }
 
+export const getPhilosopherBySchool = (userId) => {
+    return fetch(`http://localhost:8088/philosophers?userId=${userId}&_expand=school`).then((res) => res.json())
+    .then((data) => {
+        console.log("Philosophers by school:", data);
+        return data;
+    });
+}
+
 export const postNewPhilosopher = (newPhilosopher) => {
     const postOptions = {
         method: "POST",
