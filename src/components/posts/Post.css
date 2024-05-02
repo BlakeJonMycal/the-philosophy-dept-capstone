@@ -104,7 +104,7 @@ margin-left: 1em;
 .title {
   background-color: #f2f4f7;
   color: #888279;
-  margin-left: 25px;
+  margin-left: 30px;
   align-self: flex-start;
   font-style: italic;
   font-size: larger;
@@ -158,4 +158,12 @@ margin-left: 1em;
   padding: 0.5em;
   white-space: pre-wrap;
   color: #888279
+}
+.school-filter {
+  align-self: flex-start;
+  margin-left: 30px;
+  margin-bottom: 2em;
+  background-color: #f2f4f7;
+  color: #888279;
+
 }
