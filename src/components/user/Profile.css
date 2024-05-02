@@ -1,9 +1,10 @@
 .profile {
-    background-color: var(--white);
-    border: 1px solid var(--outline);
+    background-color: #f2f4f7;
+    border: 4px solid #888279;
     border-radius: 0.5rem;
     padding: 1rem;
-    align-self: center;
+    margin-bottom: 2em;
+    margin-right: 2em;
 }
 
 .profile-container {
@@ -11,4 +12,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: #f2f4f7;
+    padding: 1em;
+    height: 70vh;
 }
+

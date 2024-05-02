@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import { getAllRankings, getAllSchools, getPhilosopherById, updatePhilosopher } from "../../services/postServices"
 import { useNavigate, useParams } from "react-router-dom"
-import "./form.css"
+import "./Edit.css"
 
 export const EditPostDetails = () => {
 
@@ -57,10 +57,12 @@ export const EditPostDetails = () => {
 
 
 
-    return (
-        <form className="form">
+    return (<main className="edit-philosopher-page">
+        <div className="edit-title">Edit Philosopher</div>
+
+        <form className="edit philosopher-change">
+
             <section className="left-side">
-                <h2 className="form-title">Edit Philosopher</h2>
                 <fieldset id="name-field">
                     <label>
                         Name: {""}
@@ -155,7 +157,7 @@ export const EditPostDetails = () => {
                 <fieldset id="note-field">
                     <label>
                         Annotations:{" "}
-                        <textarea
+                        <textarea className="textarea"
                             rows={20}
                             cols={100}
                             value={philosopher.notes ? philosopher.notes : ''}
@@ -173,5 +175,5 @@ export const EditPostDetails = () => {
                 </button>
             </section>
         </form>
-    )
+        </main>)
 }

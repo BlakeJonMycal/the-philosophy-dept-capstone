@@ -19,18 +19,23 @@ export const Profile = ({ currentUser }) => {
     }
     const navigate = useNavigate()
 
-    return (<section className="profile-container">
-        <h2>My Profile</h2>
+    return (<main>
+        <div>
+        <div className="edit-title">profile</div>
+</div>
+    <section className="profile-container">
         <section className="profile">
             <div className="fullname">name: {user?.fullName} </div>
             <div className="username">username: {user?.userName} </div>
-            <div className="email">email: {user?.email} </div>
+            <div className="user-email">email: {user?.email} </div>
             <div className="postcount">number of philosophers in library: {user?.philosophers?.length} </div>
             </section>
-
             <button className="button btn-secondary" onClick={handleProfileEditClick}>edit profile</button>
 
 
+
         </section>
+
+        </main>
     )
 }

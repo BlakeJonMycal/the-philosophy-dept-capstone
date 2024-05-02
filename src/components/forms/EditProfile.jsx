@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import "./form.css"
+import "./Edit.css"
 import { useNavigate } from "react-router-dom"
 import { getUserById, updateProfile } from "../../services/userService"
 
@@ -31,27 +31,30 @@ export const EditProfile = ({ currentUser }) => {
     const navigate = useNavigate()
 
 
-    return (
+    return (<>
+        <div className="edit-title">edit profile</div>
 
-        <form>
-            <h2 className="form-title">Edit Profile</h2>
-            <fieldset id="name-field">
-                <label>
-                    name:
-                </label>
-                <input
-                    onChange={(event) => {
-                        const copy = { ...user }
-                        copy.fullName = event.target.value
-                        setUser(copy)
-                    }}
-                    type="text"
-                    value={user.fullName ? user.fullName : ''}
-                />
-            </fieldset>
-            <fieldset id="username-field">
-                <label>
-                    username:
+        <section className="edit profile-page">
+
+            <form className="edit profile-change">
+                <fieldset id="name-field">
+                    <label>
+                        name:
+
+                    </label>
+                    <input
+                        onChange={(event) => {
+                            const copy = { ...user }
+                            copy.fullName = event.target.value
+                            setUser(copy)
+                        }}
+                        type="text"
+                        value={user.fullName ? user.fullName : ''}
+                    />
+                </fieldset>
+                <fieldset id="username-field">
+                    <label>
+                        username:
                     </label>
 
                     <input
@@ -63,10 +66,10 @@ export const EditProfile = ({ currentUser }) => {
                         type="text"
                         value={user.userName ? user.userName : ''}
                     />
-            </fieldset>
-            <fieldset id="email-field">
-                <label>
-                    email:
+                </fieldset>
+                <fieldset id="email-field">
+                    <label>
+                        email:
                     </label>
 
                     <input
@@ -78,9 +81,11 @@ export const EditProfile = ({ currentUser }) => {
                         type="text"
                         value={user.email ? user.email : ''}
                     />
-            </fieldset>
-            <button className="btn-secondary save-button" onClick={handleProfileSave}>submit changes</button>
-        </form>
+                </fieldset>
+                <button className="btn-secondary save-button-profile" onClick={handleProfileSave}>submit changes</button>
+            </form>
+        </section>
+        </>
     )
 
 }

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import { getAllRankings, getAllSchools, postNewPhilosopher } from "../../services/postServices"
 import { useNavigate } from "react-router-dom"
-import "./form.css"
+import "./Edit.css"
 
 export const NewPostForm = ({ currentUser }) => {
     const [newPost, setNewPost] = useState({})
@@ -40,10 +40,11 @@ export const NewPostForm = ({ currentUser }) => {
 
 
 
-    return (
-        <form className="form">
+    return (<main className="edit-philosopher-page">
+        <div className="edit-title">add a new philosopher to your library</div>
+
+        <form className="edit philosopher-add">
             <section className="left-side">
-                <h2 className="form-title">Add a New Philosopher to Your Library</h2>
                 <fieldset id="name-field">
                     <label>
                         Name:{" "}
@@ -149,5 +150,6 @@ export const NewPostForm = ({ currentUser }) => {
                 </button>
             </section>
         </form>
+    </main>
     )
 }

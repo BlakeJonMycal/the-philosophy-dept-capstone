@@ -28,33 +28,33 @@ export const PostDetails = () => {
     }
 
 
-    return <section className="philosopher">
-        <section className="details-left">
-            <section className="details-left-container">
-            <header className="philosopher-header-top">
-                <img src={philosopher.image} className="philosopherdetails-image" />
-                <ul className="philosopher-info">
-                    <li>Name: {philosopher.philosopherName}</li>
-                    <li>School of Thought: {philosopher.school?.name}</li>
-                    <li>Ranking: {philosopher.ranking?.name}</li>
-                </ul>
+    return <section className="philosopher-page">
+        <div className="main-content-details">
+            <div className="details-left">
+                <header className="philosopher-header-top">
+                    <img src={philosopher.image} className="philosopherdetails-image" />
+                    <ul className="philosopher-info">
+                        <li className="p-name">Name: {philosopher.philosopherName}</li>
+                        <li className="p-school">School of Thought: {philosopher.school?.name}</li>
+                        <li className="p-rank">Ranking: {philosopher.ranking?.name}</li>
+                    </ul>
                 </header>
                 <h3 className="h3-reading">Reading List: </h3>
                 <div className="philosopher-reading-list">
-                {philosopher.books}</div>
-            </section>
-        </section>
-        
-        <section className="details-right">
-            <div className="philosopher-notes">
-                <h3 className="h3">Annotations</h3>
-                {philosopher.notes}
+                    {philosopher.books}
+                </div>
             </div>
-            <div className="detail-buttons">
-            <button className="button btn-secondary" onClick={handleEditClick}>Edit Philosopher</button>
-            <button className="button btn-warning" onClick={deletePhilosopherFromDatabase}>Delete Philosopher</button>
-            </div>
-        </section>
 
+            <div className="details-right">
+            <h3 className="h3">Annotations</h3>
+                <div className="philosopher-notes">
+                    {philosopher.notes}
+                </div>
+                <div className="detail-buttons">
+                    <button className="button btn-secondary" onClick={handleEditClick}>Edit Philosopher</button>
+                    <button className="button btn-warning" onClick={deletePhilosopherFromDatabase}>Delete Philosopher</button>
+                </div>
+            </div>
+        </div>
     </section>
 }

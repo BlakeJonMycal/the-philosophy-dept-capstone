@@ -30,9 +30,7 @@ export const Login = () => {
   
     return (
       <main className="container-login">
-        <section>
           <form className="form-login" onSubmit={handleLogin}>
-            <h1>The Philosophy Dept.</h1>
             <img className="login-logo" src="/images/capstone logo.png" alt="logo" />
             <h2>an annotated digital library</h2>
 
@@ -57,7 +55,6 @@ export const Login = () => {
               </div>
             </fieldset>
           </form>
-        </section>
         <section className="enroll-link">
           <Link to="/register">not a member yet? enroll here</Link>
         </section>

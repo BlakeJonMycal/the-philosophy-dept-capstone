@@ -11,7 +11,7 @@ font-family: "Roboto", sans-serif;
 /* Feel free to change these values and create your own color palette! https://coolors.co/ is a great resource */
 :root {
   --primary: #1D1D1D;
-  --secondary: #5c6b73;
+  --secondary: #888279;
   --info: #7fb800;
   --warning: #f67280;
   --white: #ffffff;
@@ -30,7 +30,7 @@ textarea {
 }
 
 body {
-  margin: 0;
+  margin: 0 -.25em 0 0;
   padding: 0;
 }
 
@@ -47,6 +47,9 @@ h6 {
   background-color: #1D1D1D ;
 }
 
+h3 {
+  color: #888279
+}
 
 /* This prevents all the links in the app from having default underline */
 a {
@@ -87,7 +90,7 @@ button {
 }
 
 .btn-secondary:hover {
-  background-color: #232f34;
+  background-color: #635f59;
 }
 
 .btn-warning {

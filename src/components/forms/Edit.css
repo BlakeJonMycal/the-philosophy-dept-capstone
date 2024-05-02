@@ -1,0 +1,70 @@
+.save-button {
+  float: inline-end;
+  margin-top: 1em;
+  bottom: -15px;
+  /* Adjust this value as needed */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.philosopher-change {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 4em;
+  background-color: #f2f4f7;
+  max-height: 100vh;
+}
+.philosopher-add {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 6em;
+  background-color: #f2f4f7;
+  max-height: 100vh;
+}
+
+.profile-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f2f4f7;
+  padding: 1em;
+  height: 70vh;
+}
+
+.profile-change {
+  background-color: #f2f4f7;
+  border: 4px solid #888279;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin-bottom: 2em;
+  margin-right: 2em;
+}
+
+.save-button-profile {
+margin-left: 5em;
+}
+
+.left-side {
+  flex: 1 1 30%;
+  min-width: 300px;
+  margin-bottom: 1em;
+}
+
+.right-side {
+  flex: 1 1 50%;
+  min-width: 300px;
+  padding-right: em;
+}
+
+.edit-title {
+  background-color: #f2f4f7;
+  padding-top: 2em;
+  font-size: larger;
+  font-weight: bolder;
+  font-style: italic;
+  padding-left: 4em;
+  border-bottom: 4px solid #888279;
+}
