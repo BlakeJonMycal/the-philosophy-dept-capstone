@@ -8,29 +8,31 @@ import { Link } from "react-router-dom"
 export const PostList = ({ currentUser }) => {
   const [userPosts, setUserPosts] = useState([])
 
-useEffect(() => {
-  const getAndSetUserPosts = () => {
-    getAllPosts().then(allPosts => {
-      const filteredPosts = allPosts.filter(post => post.userId === currentUser.id)
-      setUserPosts(filteredPosts)
-    })
-  }
-  getAndSetUserPosts(currentUser)
-}, [currentUser])
+  useEffect(() => {
+    const getAndSetUserPosts = () => {
+      getAllPosts().then(allPosts => {
+        const filteredPosts = allPosts.filter(post => post.userId === currentUser.id)
+        setUserPosts(filteredPosts)
+      })
+    }
+    getAndSetUserPosts(currentUser)
+  }, [currentUser])
 
 
   return (
-  <section className="library-page">
-    <h2 className="title">library</h2>
-    <section className="philosopherlibrary-container">
-      {userPosts.map((postObj) => (
-        
-          <Link to={`/myLibrary/${postObj.id}`} className="philosopherlibrary-card" key={postObj.id}>
-            <Post post={postObj} currentUser={currentUser} />
-          </Link>
-        
-      ))}
+    <section className="library-page">
+      <div className="title">library</div>
+      <section className="philosopherlibrary-container">
+        {userPosts.length === 0 ? (
+          <p>your library is currently empty</p>
+        ) : (
+          userPosts.map((postObj) => (
+            <Link to={`/myLibrary/${postObj.id}`} className="philosopherlibrary-card" key={postObj.id}>
+              <Post post={postObj} currentUser={currentUser} />
+            </Link>
+          ))
+        )}
+      </section>
     </section>
-  </section>
   )
 }
