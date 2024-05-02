@@ -22,9 +22,12 @@ export const PostDetails = () => {
     }
 
     const deletePhilosopherFromDatabase = () => {
-        deletePhilosopher(philosopher.id).then(() => {
-            navigate(`/myLibrary`)
-        })
+        const confirmDelete = window.confirm("are you sure you want to delete this philosopher?")
+        if (confirmDelete) {
+            deletePhilosopher(philosopher.id).then(() => {
+                navigate(`/myLibrary`)
+            })
+        }
     }
 
 
@@ -46,7 +49,7 @@ export const PostDetails = () => {
             </div>
 
             <div className="details-right">
-            <h3 className="h3">Annotations</h3>
+                <h3 className="h3">Annotations</h3>
                 <div className="philosopher-notes">
                     {philosopher.notes}
                 </div>

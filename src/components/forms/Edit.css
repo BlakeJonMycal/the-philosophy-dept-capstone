@@ -62,9 +62,9 @@ margin-left: 5em;
 .edit-title {
   background-color: #f2f4f7;
   padding-top: 2em;
-  font-size: larger;
-  font-weight: bolder;
   font-style: italic;
+  font-size: large;
   padding-left: 4em;
   border-bottom: 4px solid #888279;
+  color: #888279;
 }

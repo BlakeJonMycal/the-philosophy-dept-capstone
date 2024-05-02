@@ -5,9 +5,8 @@
   background-color: #f2f4f7;
   padding-top: 1em;
   padding-bottom: 3em;
-  padding-right: 1em;
-  padding-left: 1em;
-
+  width: 100%;
+  overflow-x: hidden;
 }
 
 .philosopherlibrary-container {
@@ -35,6 +34,8 @@
   object-fit: cover;
   border-radius: 25px;
   border: 1.5px solid #1D1D1D;
+  box-shadow: 10px 10px 10px 2px #888279;
+  margin-bottom: .5em;
 }
 
 .philosopherlibrary-info {
@@ -49,6 +50,7 @@
   background-color: #f2f4f7;
   padding: 1em;
   height: 80vh;
+  overflow-x: hidden;
 }
 
 .main-content-details {
@@ -94,17 +96,19 @@ margin-left: 1em;
   object-fit: cover;
   border-radius: 25px;
   margin: 1em;
-  border: 2px solid #888279
+  border: 2px solid #888279;
 }
 
 
 
 .title {
   background-color: #f2f4f7;
+  color: #888279;
   margin-left: 25px;
   align-self: flex-start;
   font-style: italic;
-  padding-bottom: .5em;
+  font-size: larger;
+  padding-bottom: 1em;
 }
 
 
