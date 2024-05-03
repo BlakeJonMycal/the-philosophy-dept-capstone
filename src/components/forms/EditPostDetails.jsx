@@ -63,6 +63,7 @@ export const EditPostDetails = () => {
         <form className="edit philosopher-change">
 
             <section className="left-side">
+                <div className="info-left-side">
                 <fieldset id="name-field">
                     <label>
                         Name: {""}
@@ -152,6 +153,7 @@ export const EditPostDetails = () => {
                         />
                     </label>
                 </fieldset>
+                </div>
             </section>
             <section className="right-side">
                 <fieldset id="note-field">

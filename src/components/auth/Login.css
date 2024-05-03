@@ -112,3 +112,16 @@ fieldset {
 .register-logo {
   padding-top: 2em;
 }
+
+.motto-login{
+  color: #888279;
+    font-size: smaller;
+    font-style: italic;
+    margin-bottom: 2em;
+}
+
+.subheading {
+  color: #888279;
+    font-size: medium;
+    font-style: italic;
+}

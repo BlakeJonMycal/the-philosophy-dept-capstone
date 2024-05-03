@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
 import { Link } from "react-router-dom"
 import { useNavigate } from "react-router-dom"
 import "./Login.css"
@@ -7,6 +7,17 @@ import { getUserByEmail } from "../../services/userService"
 export const Login = () => {
     const [email, set] = useState("")
     const navigate = useNavigate()
+
+    useEffect(() => {
+      const audio = document.getElementById('bgAudio')
+      const handleCanPlay = () => {
+        audio.play()
+      }
+      audio.addEventListener('canplay', handleCanPlay)
+      return () => {
+        audio.removeEventListener('canplay', handleCanPlay)
+      }
+    }, [])
   
     const handleLogin = (e) => {
       e.preventDefault()
@@ -28,12 +39,12 @@ export const Login = () => {
       })
     }
   
+  
     return (
       <main className="container-login">
           <form className="form-login" onSubmit={handleLogin}>
             <img className="login-logo" src="/images/capstone logo.png" alt="logo" />
-            <h2>an annotated digital library</h2>
-
+            <div className="motto-login">vita non habet sensum et hoc solum est causa vivere</div>
             <fieldset>
               <div className="form-group">
                 <input
@@ -58,6 +69,11 @@ export const Login = () => {
         <section className="enroll-link">
           <Link to="/register">not a member yet? enroll here</Link>
         </section>
+        <div className="audio">
+        <audio id="bgAudio" autoPlay>
+          <source src="/audio/Richter-daylight.mp3" type="audio/mpeg" />
+        </audio>
+        </div>
       </main>
     )
   }

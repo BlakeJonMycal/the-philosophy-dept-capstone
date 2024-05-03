@@ -45,6 +45,7 @@ export const NewPostForm = ({ currentUser }) => {
 
         <form className="edit philosopher-add">
             <section className="left-side">
+            <div className="info-left-side">
                 <fieldset id="name-field">
                     <label>
                         Name:{" "}
@@ -128,6 +129,7 @@ export const NewPostForm = ({ currentUser }) => {
                         />
                     </label>
                 </fieldset>
+                </div>
             </section>
             <section className="right-side">
                 <fieldset id="note-field">

@@ -51,12 +51,14 @@ margin-left: 5em;
   flex: 1 1 30%;
   min-width: 300px;
   margin-bottom: 1em;
+  border: 3px solid #b7c2ab;
+  margin-right: 2em;
 }
 
 .right-side {
   flex: 1 1 50%;
   min-width: 300px;
-  padding-right: em;
+  padding-left: 3em;
 }
 
 .edit-title {
@@ -67,4 +69,8 @@ margin-left: 5em;
   padding-left: 4em;
   border-bottom: 4px solid #888279;
   color: #888279;
+}
+
+.info-left-side{
+  padding: 2em;
 }

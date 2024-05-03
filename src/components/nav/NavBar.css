@@ -52,6 +52,7 @@
     justify-content: center;
     align-items: center;
     overflow-x: hidden;
+    z-index: 2;
   }
   .footer-logo {
     display: flex;

@@ -47,6 +47,8 @@ export const Register = (props) => {
   return (<>
     <main className="container-login"style={{ textAlign: "center" }}>
     <img className="register-logo" src="/images/capstone logo.png" alt="logo" />
+    <div className="subheading">an annotated digital library</div>
+
       <section className="edit-register-page">
       <form className="edit-register-change" onSubmit={handleRegister}>
 
