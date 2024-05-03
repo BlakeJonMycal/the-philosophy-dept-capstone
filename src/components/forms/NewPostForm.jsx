@@ -56,6 +56,7 @@ export const NewPostForm = ({ currentUser }) => {
                                 setNewPost(copy)
                             }}
                             type="text"
+                            required
                         />
                     </label>
                 </fieldset>
@@ -63,6 +64,7 @@ export const NewPostForm = ({ currentUser }) => {
                     <label>
                         School of Thought:{" "}
                         <select
+                        required
                             onChange={(event) => {
                                 const copy = { ...newPost }
                                 copy.schoolId = parseInt(event.target.value)
@@ -84,6 +86,7 @@ export const NewPostForm = ({ currentUser }) => {
                     <label>
                         Ranking:{" "}
                         <select
+                        required
                             onChange={(event) => {
                                 const copy = { ...newPost }
                                 copy.rankingId = parseInt(event.target.value)
@@ -105,6 +108,7 @@ export const NewPostForm = ({ currentUser }) => {
                     <label>
                         Image URL:{" "}
                         <input
+                        required
                             type="text"
                             onChange={(event) => {
                                 const copy = { ...newPost }
@@ -126,6 +130,7 @@ export const NewPostForm = ({ currentUser }) => {
                                 setNewPost(copy)
                             }}
                             type="text"
+                            required
                         />
                     </label>
                 </fieldset>
@@ -144,6 +149,7 @@ export const NewPostForm = ({ currentUser }) => {
                                 setNewPost(copy)
                             }}
                             type="text"
+                            required
                         />
                     </label>
                 </fieldset>

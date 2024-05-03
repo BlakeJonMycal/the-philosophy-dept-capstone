@@ -50,6 +50,7 @@ export const EditProfile = ({ currentUser }) => {
                         }}
                         type="text"
                         value={user.fullName ? user.fullName : ''}
+                        required
                     />
                 </fieldset>
                 <fieldset id="username-field">
@@ -65,6 +66,7 @@ export const EditProfile = ({ currentUser }) => {
                         }}
                         type="text"
                         value={user.userName ? user.userName : ''}
+                        required
                     />
                 </fieldset>
                 <fieldset id="email-field">
@@ -80,6 +82,7 @@ export const EditProfile = ({ currentUser }) => {
                         }}
                         type="text"
                         value={user.email ? user.email : ''}
+                        required
                     />
                 </fieldset>
                 <button className="btn-secondary save-button-profile" onClick={handleProfileSave}>submit changes</button>

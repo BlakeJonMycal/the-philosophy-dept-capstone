@@ -75,6 +75,7 @@ export const EditPostDetails = () => {
                             copy.philosopherName = event.target.value
                             setPhilosopher(copy)
                         }}
+                        required
                         type="text"
                         value={philosopher.philosopherName ? philosopher.philosopherName : ''}
                     />
@@ -84,6 +85,7 @@ export const EditPostDetails = () => {
                         School of Thought: {""}
                     </label>
                     <select
+                    required
                         value={philosopher.schoolId}
                         onChange={(event) => {
                             const copy = { ...philosopher }
@@ -105,6 +107,7 @@ export const EditPostDetails = () => {
                     <label>
                         Ranking:{" "}
                         <select
+                        required
                             value={philosopher.rankingId}
                             onChange={(event) => {
                                 const copy = { ...philosopher }
@@ -127,6 +130,7 @@ export const EditPostDetails = () => {
                     <label>
                         Image URL:{" "}
                         <input
+                        required
                             type="text"
                             value={philosopher.image ? philosopher.image : ''}
                             onChange={(event) => {
@@ -150,6 +154,7 @@ export const EditPostDetails = () => {
                                 setPhilosopher(copy)
                             }}
                             type="text"
+                            required
                         />
                     </label>
                 </fieldset>
@@ -169,6 +174,7 @@ export const EditPostDetails = () => {
                                 setPhilosopher(copy)
                             }}
                             type="text"
+                            required
                         />
                     </label>
                 </fieldset>
