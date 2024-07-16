@@ -5,6 +5,13 @@
 The Philosophy Department:
 In this app, users will be able to create and save philosopher profiles–profiles which will include a name, image, school of thought, and personalized user notes on books and philosophical ideas of that philosopher–to their own digital personal library. Users will be able to build out their library and sort/access their compiled knowledge with ease.
 
+## Getting Started
+1. Clone the repository
+2. CD to the directory
+3. Run ```NPM install```
+4. Run ```NPM run dev```
+5. Ensure the API is running
+6. In the browser, Navigate to the localhost link
 <!-- USAGE EXAMPLES -->
 ## Usage
 ### As a user, I should be able to view all my posts
@@ -58,4 +65,6 @@ Then the user will be directed to the “edit profile” page where they will be
 Given the user wants to save their profile changes
 When the user clicks on the “submit changes” button on the “edit profile” page
 Then the changes will be updated in the database and the user will be redirected back to their profile.
+### Tools
+This project was built using React, JSX, and CSS
 
